@@ -1,0 +1,13 @@
+header{
+    background-color: #F6F6F6;
+}
+p {
+    color: #6C6C6C;
+    margin-bottom: 0;
+}
+a{
+    color: #787878;
+}
+.active{
+    background-color: rgb(61, 59, 59);
+}

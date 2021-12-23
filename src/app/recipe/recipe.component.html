@@ -1,0 +1,14 @@
+<div class="recipe mt-5 d-flex">
+    <div class="recipes w-50">
+        <div class="header d-flex">
+            <button type="button" class="btn btn-success" (click)="handleCreate()">New Recipe</button>
+            <h3 class="m-auto">Please select a Recipe!</h3>
+        </div>
+        <div class="list-recipe mt-5 w-75">
+            <app-list-recipe-item [recipeList]="recipeList" (id)="handleAction($event)"></app-list-recipe-item>
+        </div>
+    </div>
+    <div class="w-50">
+        <router-outlet></router-outlet> 
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<ul class="list-group" >
+    <li class="list-group-item d-flex mt-3" *ngFor="let item of recipeList" (click)="handleAction(item.id)">
+        <p class="w-75">{{item.name}}</p>
+        <img class="m-auto" [src]="item.img" alt="" width="100" height="100">
+    </li>
+</ul>

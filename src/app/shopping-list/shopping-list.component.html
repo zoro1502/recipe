@@ -1,0 +1,11 @@
+<div class="header">
+    <app-update [isUpdate]="isUpdate" [item] = "item" ></app-update>
+</div>
+
+<div class="list-Shopping">
+    <ul class="list-group w-50">
+        <li class="list-group-item" *ngFor="let item of listShopping" (click)="handleShow(item.id)">
+            {{item.name}} ({{item.amount}})
+        </li>
+    </ul>
+</div>

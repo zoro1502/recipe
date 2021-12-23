@@ -1,0 +1,19 @@
+<img [src]="recipeItem.img" alt="" height="300" width="200">
+<h4 class="mt-3">{{recipeItem.name}}</h4>
+<div class="dropdown my-3" (click)="isShow = !isShow">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" [ngClass]="{ show: isShow }">
+        Manage Recipe
+    </button>
+    <div class="dropdown-menu show " [ngClass]="{' show': isShow }" aria-labelledby="dropdownMenuButton">
+        <button class="dropdown-item" (click)="handleShopping(recipeItem.brand)">To Shopping List</button>
+        <button class="dropdown-item" (click)="handleEdit(recipeItem.id)">Edit Recipe</button>
+        <button class="dropdown-item" (click)="handleDelete(recipeItem.id)">Delete Recipe</button>
+    </div>
+</div>
+<p>{{recipeItem.name}}</p>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let item of brandItem;index as i">
+        <p>   {{item.name}} - {{item.amount}}</p>
+    </li>
+</ul>
